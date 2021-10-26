@@ -7,14 +7,6 @@ import ru.job4j.chess.firuges.white.PawnWhite;
 
 public class LogicTest {
 
-    @Test
-    public void whenC1ToH6ThenOk()
-            throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
-        Logic logic = new Logic();
-        logic.add(new BishopBlack(Cell.C1));
-        logic.move(Cell.C1, Cell.H6);
-    }
-
     @Test(expected = OccupiedCellException.class)
     public void whenWayBusyThenException()
             throws OccupiedCellException, FigureNotFoundException, ImpossibleMoveException {
